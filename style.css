@@ -274,26 +274,111 @@ main {
   font-size: 13px; color: var(--text); font-weight: 500;
 }
 
-/* ── EDUCATION ── */
-.edu-card {
-  background: var(--card); border: 1px solid var(--border);
-  border-radius: 12px; padding: 1.6rem 1.8rem;
-  border-left: 3px solid var(--crimson);
-  margin-bottom: 1.2rem; position: relative;
-  transition: background 0.3s, border-color 0.3s;
+
+/* --- EDUCATION SECTION STYLING --- */
+.education-section {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.edu-year {
-  position: absolute; top: 1.4rem; right: 1.6rem;
-  font-size: 11px; color: var(--crimson-light);
-  background: rgba(139,0,0,0.12);
-  border: 1px solid var(--border-red);
-  border-radius: 20px; padding: 3px 10px;
+/* Timeline එක මැදින් යන ප්‍රධාන ඉර */
+.education-timeline {
+  position: relative;
+  border-left: 2px solid rgba(220, 20, 60, 0.3); /* Crimson පාට ලස්සන රේඛාවක් */
+  padding-left: 30px;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* කාඩ්ස් අතර හිස්තැන */
 }
 
-.edu-inst { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
-.edu-degree { font-size: 13px; color: var(--text-accent); margin-bottom: 8px; }
-.edu-detail { font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+/* හැම අධ්‍යාපන කොටසක්ම වෙන වෙනම ලස්සන කාඩ් එකක් කරනවා */
+.education-item {
+  position: relative;
+  background: #16161a; /* Sidebar එකට ගැලපෙන dark background එකක් */
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+/* මවුස් එක කාඩ් එක උඩට ගෙනියද්දී ලස්සන වෙන්න */
+.education-item:hover {
+  transform: translateY(-3px);
+  border-color: rgba(220, 20, 60, 0.4);
+  box-shadow: 0 6px 20px rgba(220, 20, 60, 0.1);
+}
+
+/* ඉර උඩ වදින කුඩා රවුම් තිත */
+.education-dot {
+  position: absolute;
+  left: -41px; /* ඉර උඩටම ගන්න */
+  top: 25px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--crimson, #dc143c);
+  border: 3px solid #0f0f11; /* background එකේ පාට */
+  box-shadow: 0 0 8px var(--crimson, #dc143c);
+}
+
+/* අවුරුදු පේන කොටස (Date) */
+.education-date {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--crimson, #dc143c);
+  background: rgba(220, 20, 60, 0.1);
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Degree/Diploma Titles */
+.education-content h3 {
+  font-size: 18px;
+  color: #ffffff;
+  margin: 0 0 6px 0;
+  font-weight: 600;
+}
+
+/* University/School Names */
+.education-content h4 {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0 0 12px 0;
+  font-weight: 400;
+}
+
+/* Modules සහ Results විස්තර */
+.education-details {
+  margin-top: 10px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.6;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 10px;
+}
+
+/* Best Performance Trophy Badge */
+.education-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 193, 7, 0.1); /* Gold/Yellow background */
+  color: #ffc107;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 10px;
+  border: 1px solid rgba(255, 193, 7, 0.2);
+}
+
 
 .subject-chips { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 1rem; }
 
@@ -491,3 +576,5 @@ main {
   .skills-grid, .contact-grid, .lang-grid { grid-template-columns: 1fr; }
   .hobbies-grid { grid-template-columns: 1fr 1fr; }
 }
+
+
