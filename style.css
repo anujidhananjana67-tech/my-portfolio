@@ -499,7 +499,6 @@ main {
 .hobby-name { font-size: 13px; font-weight: 500; color: var(--text); margin-bottom: 4px; }
 .hobby-note { font-size: 11px; color: var(--text-muted); line-height: 1.5; }
 
-
 /* ── LANGUAGES ── */
 .lang-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 
