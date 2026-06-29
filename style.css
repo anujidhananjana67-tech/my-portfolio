@@ -573,6 +573,79 @@ main {
 .contact-msg p { font-size: 14px; color: var(--text-muted); line-height: 1.75; }
 .contact-msg strong { color: var(--text); }
 
+/* --- CONTACT SECTION STYLING --- */
+.contact-section {
+  padding: 60px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-container {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-card {
+  background: #16161a;
+  padding: 40px 30px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  max-width: 600px;
+  width: 100%;
+}
+
+.contact-text {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-decoration: none;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.02);
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  width: 100%;
+  max-width: 400px;
+  transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+  border-color: rgba(220, 20, 60, 0.4);
+  background: rgba(220, 20, 60, 0.05);
+  transform: translateY(-2px);
+}
+
+.contact-icon {
+  font-size: 20px;
+  color: var(--crimson, #dc143c);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-item span {
+  font-size: 14px;
+  font-weight: 500;
+  word-break: break-all; /* දිග ඊමේල් කැඩිලා පේන්න */
+}
+
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
   body { flex-direction: column; }
