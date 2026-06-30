@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,18 +10,16 @@
 </head>
 <body>
 
+  <!-- Navigation Sidebar -->
   <aside class="sidebar">
-    
-  
-  <div class="profile-container">
-    <button class="theme-btn" id="themeToggleBtn">
-      <i class="fa-solid fa-moon"></i>
-    </button>
-    <img src="my photo.jpg.jpeg" alt="Anuji Dhananjana" class="sidebar-profile-img" onerror="this.style.display='none';">
-  </div>
+    <div class="profile-container">
+      <button class="theme-btn" id="themeToggleBtn">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+      <img src="my photo.jpg.jpeg" alt="Anuji Dhananjana" class="sidebar-profile-img" onerror="this.style.display='none';">
+    </div>
 
     <p class="sidebar-name">Anuji Dhananjana</p>
-    
     
     <a href="CV.pdf" download="Anuji_Dhananjana_CV.pdf" class="cv-download-btn">
       <i class="fa-solid fa-download"></i> Download CV
@@ -30,15 +27,17 @@
 
     <div class="nav-divider"></div>
     <p class="nav-label">Navigation</p>
+    
     <nav>
-      <a href="#" class="active" data-section="about"><i class="fa-regular fa-user"></i> About me</a>
-      <a href="#" data-section="education"><i class="fa-solid fa-graduation-cap"></i> Education</a>
-      <a href="#" data-section="skills"><i class="fa-solid fa-layer-group"></i> Skills</a>
-      <a href="#" data-section="projects"><i class="fa-solid fa-code"></i> Projects</a>
-      <a href="#" data-section="extracurricular"><i class="fa-solid fa-users"></i> Extracurricular</a>
-      <a href="#" data-section="languages"><i class="fa-solid fa-language"></i> Languages</a>
-      <a href="#" data-section="contact"><i class="fa-solid fa-paper-plane"></i> Contact</a>
+      <!-- වෙන වෙනම පිටුවලට යන ලෙස links සකසා ඇත -->
+      <a href="index.html" class="active"><i class="fa-regular fa-user"></i> About me</a>
+      <a href="education.html"><i class="fa-solid fa-graduation-cap"></i> Education</a>
+      <a href="skills.html"><i class="fa-solid fa-layer-group"></i> Skills</a>
+      <a href="projects.html"><i class="fa-solid fa-code"></i> Projects</a>
+      <a href="extracurricular.html"><i class="fa-solid fa-users"></i> Extracurricular</a>
+      <a href="contact.html"><i class="fa-solid fa-paper-plane"></i> Contact</a>
     </nav>
+    
     <div class="sidebar-social">
       <a href="mailto:anujidhananjana67@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
       <a href="https://www.linkedin.com/in/anuji-dhananjana" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
@@ -47,8 +46,8 @@
     </div>
   </aside>
 
+  <!-- Main Content Area -->
   <main>
-
     <section id="about" class="section active">
       <p class="section-eyebrow">Welcome</p>
       <h1 class="section-title">Hello, I'm <em>Anuji</em></h1>
@@ -85,253 +84,68 @@
       </div>
     </section>
 
-  <section id="education" class="education-section">
-  <h2 class="section-title">Education</h2>
+    <!-- Technical Skills & Tools Section -->
+<div class="tech-skills-container">
+  <h2 class="section-title">Technical <em>Skills & Tools</em></h2>
+  <div class="divider"></div>
   
-  <div class="education-timeline">
-    
-    <!-- University Section -->
-    <div class="education-item">
-      <div class="education-dot"></div>
-      <div class="education-content">
-        <span class="education-date">2025 - Present</span>
-        <h3>Bachelor of Science in Physical Science (ICT)</h3>
-        <h4>University of Sri Jayewardenepura</h4>
-        <div class="education-details">
-          <strong>Key Modules:</strong> Mathematics, ICT, Physics
-        </div>
-      </div>
+  <div class="tech-grid">
+    <!-- Java -->
+    <div class="tech-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" />
+      <span>Java</span>
     </div>
 
-    <!-- Diploma in English -->
-    <div class="education-item">
-      <div class="education-dot"></div>
-      <div class="education-content">
-        <span class="education-date">2022</span>
-        <h3>Diploma in English</h3>
-        <h4>Esoft Metro Campus</h4>
-        <div class="education-badge">
-          <i class="fa-solid fa-trophy"></i> Best Performances Award
-        </div>
-      </div>
+    <!-- HTML5 -->
+    <div class="tech-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" />
+      <span>HTML5</span>
     </div>
 
-    <!-- Diploma in ICT -->
-    <div class="education-item">
-      <div class="education-dot"></div>
-      <div class="education-content">
-        <span class="education-date">2022</span>
-        <h3>Diploma in ICT</h3>
-        <h4>Esoft Metro Campus</h4>
-      </div>
+    <!-- CSS3 -->
+    <div class="tech-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" />
+      <span>CSS3</span>
     </div>
 
-    <!-- Advanced Level Section -->
-    <div class="education-item">
-      <div class="education-dot"></div>
-      <div class="education-content">
-        <span class="education-date">2020 - 2023</span>
-        <h3>G.C.E. Advanced Level</h3>
-        <h4>Defence Services College, Colombo 02</h4>
-        <div class="education-details">
-          <strong>Stream:</strong> Physical Science (Maths Stream)<br>
-          <strong>Results:</strong> 2B, 1C | General English: A
-        </div>
-      </div>
+    <!-- JavaScript -->
+    <div class="tech-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />
+      <span>JavaScript</span>
     </div>
 
-    <!-- Tamil Language Course -->
-    <div class="education-item">
-      <div class="education-dot"></div>
-      <div class="education-content">
-        <span class="education-date">2018</span>
-        <h3>Certificate Course in Tamil Language</h3>
-        <h4>NenaPiyasa</h4>
-      </div>
+    <!-- MySQL -->
+    <div class="tech-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" />
+      <span>MySQL</span>
     </div>
 
-  </div>
-</section>
-
-  <section id="skills" class="skills-section">
-  <h2 class="section-title">Skills</h2>
-  
-  <div class="skills-grid">
-    <!-- Category 1: Tech & Web -->
-    <div class="skills-card">
-      <div class="skills-icon"><i class="fa-solid fa-code"></i></div>
-      <h3>Programming & Web</h3>
-      <p>Java, HTML5, CSS3, JavaScript, MySQL</p>
+    <!-- Git -->
+    <div class="tech-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" />
+      <span>Git</span>
     </div>
 
-    <!-- Category 2: Tools & Platforms -->
-    <div class="skills-card">
-      <div class="skills-icon"><i class="fa-solid fa-toolbox"></i></div>
-      <h3>Tools & Platforms</h3>
-      <p>Git, GitHub, VS Code</p>
+    <!-- GitHub -->
+    <div class="tech-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" class="github-icon" />
+      <span>GitHub</span>
+    </div>
+
+    <!-- VS Code -->
+    <div class="tech-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" />
+      <span>VS Code</span>
     </div>
   </div>
-</section>
-
-    <section id="projects" class="projects-section">
-  <h2 class="section-title">Projects</h2>
-  
-  <div class="projects-grid">
-    
-    <!-- Project 3: EV Charging System (Highlight this) -->
-    <div class="project-card" style="border: 1px solid var(--crimson, #dc143c);">
-      <div class="project-content">
-        <div class="project-icon"><i class="fa-solid fa-charging-station"></i></div>
-        <h3>EV Charging System (Web App)</h3>
-        <span class="status-badge" style="background: var(--crimson); color: white; padding: 2px 8px; border-radius: 4px; font-size: 10px;">Ongoing</span>
-        <p>A web application developed for efficient EV charging station management, monitoring, and user bookings.</p>
-        <div class="project-tech">
-          <span>Web Technologies</span>
-          <span>Database</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Project 2: OOP System -->
-    <div class="project-card">
-      <div class="project-content">
-        <div class="project-icon"><i class="fa-solid fa-code-branch"></i></div>
-        <h3>OOP Based System</h3>
-        <p>An academic project focused on implementing Object Oriented Programming concepts in a structured application.</p>
-        <div class="project-tech">
-          <span>Java</span>
-          <span>OOP</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Project 1: Java Basics -->
-    <div class="project-card">
-      <div class="project-content">
-        <div class="project-icon"><i class="fa-solid fa-terminal"></i></div>
-        <h3>Java Fundamentals Project</h3>
-        <p>Foundational project developed during the 1st year to demonstrate core Java programming capabilities.</p>
-        <div class="project-tech">
-          <span>Java</span>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-    <section id="extracurricular" class="extra-section">
-  <h2 class="section-title">Extracurricular Activities</h2>
-  
-  <div class="extra-timeline">
-    
-    <!-- Category 1: University & Recent Volunteer Work (2025 - 2026) -->
-    <div class="extra-card">
-      <div class="extra-badge">University</div>
-      <div class="extra-content">
-        <div class="extra-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-        <h3>University Engagement & Tech Communities</h3>
-        <h4>University of Sri Jayewardenepura</h4>
-        <p>Active member of the <strong>Divisarana Club</strong>, contributing to social welfare and university community projects. Additionally participated in the <strong>IEEE WIE (Women in Engineering) Celebration 2026</strong>.</p>
-      </div>
-    </div>
-
-    <!-- Category 2: Scouting, Guiding & International Volunteering (2024) -->
-    <div class="extra-card">
-      <div class="extra-badge">Volunteering</div>
-      <div class="extra-content">
-        <div class="extra-icon"><i class="fa-solid fa-compass"></i></div>
-        <h3>Girl Guiding, Rangers & International Camps</h3>
-        <h4>Sri Lanka Girl Guides Association</h4>
-        <p>Completed a comprehensive journey through <strong>Little Friends</strong>, <strong>Girl Guiding</strong>, and <strong>Rangers</strong>, developing core skills in leadership, survival, and civic duty. Actively served as a volunteer at the <strong>Ceylona International Camp 2024</strong>.</p>
-      </div>
-    </div>
-
-    <!-- Category 3: School Leadership & Societies -->
-    <div class="extra-card">
-      <div class="extra-badge">School</div>
-      <div class="extra-content">
-        <div class="extra-icon"><i class="fa-solid fa-landmark"></i></div>
-        <h3>School Leadership & Societies</h3>
-        <p>Served as an active member of the <strong>Student Parliament</strong>, gaining early experience in governance and public speaking. Also contributed as a member of the school's <strong>Science Society</strong>.</p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-    <section id="languages" class="section">
-      <p class="section-eyebrow">Communication</p>
-      <h1 class="section-title"><em>Languages</em></h1>
-      <p class="section-sub">Languages I speak and understand</p>
-      <div class="divider"></div>
-      <div class="lang-grid">
-        <div class="lang-card">
-          <div class="lang-flag">🇱🇰</div>
-          <div>
-            <p class="lang-name">Sinhala</p>
-            <p class="lang-level">Native language</p>
-            <div class="lang-dots">
-              <div class="ldot on"></div><div class="ldot on"></div><div class="ldot on"></div><div class="ldot on"></div><div class="ldot on"></div>
-            </div>
-          </div>
-        </div>
-        <div class="lang-card">
-          <div class="lang-flag">🇬🇧</div>
-          <div>
-            <p class="lang-name">English</p>
-            <p class="lang-level">Academic & professional proficiency</p>
-            <div class="lang-dots">
-              <div class="ldot on"></div><div class="ldot on"></div><div class="ldot on"></div><div class="ldot on"></div><div class="ldot off"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  
-    <section id="contact" class="section">
-      <p class="section-eyebrow">Get in Touch</p>
-      <h1 class="section-title">Contact <em>Me</em></h1>
-      <p class="section-sub">Open to internships, collaborations, and connections</p>
-      <div class="divider"></div>
-      <div class="contact-grid">
-        <a class="contact-card" href="mailto:anujidhananjana67@gmail.com">
-          <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
-          <div>
-            <p class="contact-label">Email</p>
-            <p class="contact-value">anujidhananjana67@gmail.com</p>
-          </div>
-        </a>
-        <a class="contact-card" href="https://www.linkedin.com/in/anuji-dhananjana" target="_blank">
-          <div class="contact-icon"><i class="fa-brands fa-linkedin-in"></i></div>
-          <div>
-            <p class="contact-label">LinkedIn</p>
-            <p class="contact-value">Anuji Dhananjana</p>
-          </div>
-        </a>
-        <a class="contact-card" href="https://github.com/anujidhananjana67-tech" target="_blank">
-          <div class="contact-icon"><i class="fa-brands fa-github"></i></div>
-          <div>
-            <p class="contact-label">GitHub</p>
-            <p class="contact-value">anujidhananjana67-tech</p>
-          </div>
-        </a>
-        <a class="contact-card" href="https://www.instagram.com/__snixzee.__" target="_blank">
-          <div class="contact-icon"><i class="fa-brands fa-instagram"></i></div>
-          <div>
-            <p class="contact-label">Instagram</p>
-            <p class="contact-value">@__snixzee.__</p>
-          </div>
-        </a>
-      </div>
-      <div class="contact-msg">
-        <p>Feel free to reach out for <strong>internship opportunities</strong>, <strong>academic collaborations</strong>, or just to connect. I'm always open to learning from new people and experiences.</p>
-      </div>
-    </section>
-
-    
+</div>
   </main>
 
   <script src="script.js"></script>
 </body>
+<!-- Footer Section -->
+<footer class="site-footer">
+  <p>&copy; 2026 Anuji Dhananjana. All rights reserved.</p>
+</footer>
+
 </html>

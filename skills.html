@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Skills | Anuji Dhananjana</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Sidebar Component -->
+  <aside class="sidebar">
+    <div class="profile-container">
+      <button class="theme-btn" id="themeToggleBtn">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+      <img src="my photo.jpg.jpeg" alt="Anuji Dhananjana" class="sidebar-profile-img" onerror="this.style.display='none';">
+    </div>
+
+    <p class="sidebar-name">Anuji Dhananjana</p>
+    
+    <a href="CV.pdf" download="Anuji_Dhananjana_CV.pdf" class="cv-download-btn">
+      <i class="fa-solid fa-download"></i> Download CV
+    </a>
+
+    <div class="nav-divider"></div>
+    <p class="nav-label">Navigation</p>
+    
+    <nav>
+      <!-- මෙතනදී Skills කියන ලින්ක් එක 'active' කර ඇත -->
+      <a href="index.html"><i class="fa-regular fa-user"></i> About me</a>
+      <a href="education.html"><i class="fa-solid fa-graduation-cap"></i> Education</a>
+      <a href="skills.html" class="active"><i class="fa-solid fa-layer-group"></i> Skills</a>
+      <a href="projects.html"><i class="fa-solid fa-code"></i> Projects</a>
+      <a href="extracurricular.html"><i class="fa-solid fa-users"></i> Extracurricular</a>
+      <a href="contact.html"><i class="fa-solid fa-paper-plane"></i> Contact</a>
+    </nav>
+    
+    <div class="sidebar-social">
+      <a href="mailto:anujidhananjana67@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/anuji-dhananjana" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="https://github.com/anujidhananjana67-tech" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.instagram.com/__snixzee.__" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+  </aside>
+
+  <!-- Main Content Area -->
+  <main>
+    <section id="skills" class="skills-section section active">
+      <h2 class="section-title">Skills</h2>
+      <div class="divider"></div>
+      
+      <div class="skills-grid">
+        <!-- Category 1: Tech & Web -->
+        <div class="skills-card">
+          <div class="skills-icon"><i class="fa-solid fa-code"></i></div>
+          <h3>Programming & Web</h3>
+          <p>Java, HTML5, CSS3, JavaScript, MySQL</p>
+        </div>
+
+        <!-- Category 2: Tools & Platforms -->
+        <div class="skills-card">
+          <div class="skills-icon"><i class="fa-solid fa-toolbox"></i></div>
+          <h3>Tools & Platforms</h3>
+          <p>Git, GitHub, VS Code</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+<div class="skill-progress-bar">
+  <div class="skill-name">Java <span class="percentage">80%</span></div>
+  <div class="progress-line" style="--width: 80%;"></div>
+</div>
+
+</body>
+</html>

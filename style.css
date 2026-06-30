@@ -213,9 +213,13 @@ main {
 }
 
 /* ── SECTION BASE ── */
-.section { display: none; }
-.section.active { display: block; }
-
+.section, 
+.education-section, 
+.skills-section, 
+.projects-section, 
+.extra-section { 
+  display: block !important; 
+}
 .section-eyebrow {
   font-size: 10px; letter-spacing: 0.22em;
   text-transform: uppercase; color: var(--crimson-light);
@@ -282,21 +286,19 @@ main {
   margin: 0 auto;
 }
 
-/* Timeline එක මැදින් යන ප්‍රධාන ඉර */
 .education-timeline {
   position: relative;
-  border-left: 2px solid rgba(220, 20, 60, 0.3); /* Crimson පාට ලස්සන රේඛාවක් */
+  border-left: 2px solid rgba(220, 20, 60, 0.3); 
   padding-left: 30px;
   margin-left: 10px;
   display: flex;
   flex-direction: column;
-  gap: 30px; /* කාඩ්ස් අතර හිස්තැන */
+  gap: 30px; 
 }
 
-/* හැම අධ්‍යාපන කොටසක්ම වෙන වෙනම ලස්සන කාඩ් එකක් කරනවා */
 .education-item {
   position: relative;
-  background: #16161a; /* Sidebar එකට ගැලපෙන dark background එකක් */
+  background: #16161a; 
   padding: 20px;
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.05);
@@ -304,27 +306,24 @@ main {
   transition: all 0.3s ease;
 }
 
-/* මවුස් එක කාඩ් එක උඩට ගෙනියද්දී ලස්සන වෙන්න */
 .education-item:hover {
   transform: translateY(-3px);
   border-color: rgba(220, 20, 60, 0.4);
   box-shadow: 0 6px 20px rgba(220, 20, 60, 0.1);
 }
 
-/* ඉර උඩ වදින කුඩා රවුම් තිත */
 .education-dot {
   position: absolute;
-  left: -41px; /* ඉර උඩටම ගන්න */
+  left: -41px; 
   top: 25px;
   width: 14px;
   height: 14px;
   border-radius: 50%;
   background: var(--crimson, #dc143c);
-  border: 3px solid #0f0f11; /* background එකේ පාට */
+  border: 3px solid #0f0f11; 
   box-shadow: 0 0 8px var(--crimson, #dc143c);
 }
 
-/* අවුරුදු පේන කොටස (Date) */
 .education-date {
   display: inline-block;
   font-size: 12px;
@@ -354,7 +353,6 @@ main {
   font-weight: 400;
 }
 
-/* Modules සහ Results විස්තර */
 .education-details {
   margin-top: 10px;
   font-size: 13px;
@@ -478,46 +476,6 @@ main {
   background: var(--chip-dark-bg); border: 1px solid var(--chip-dark-border);
   font-size: 11px; color: var(--text-muted);
 }
-
-/* ── HOBBIES ── */
-.hobbies-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; }
-
-.hobby-card {
-  background: var(--card); border: 1px solid var(--border);
-  border-radius: 12px; padding: 1.6rem 1.2rem;
-  text-align: center;
-  transition: border-color 0.2s, background 0.3s;
-}
-
-.hobby-card:hover { border-color: var(--border-red); }
-
-.hobby-icon {
-  font-size: 28px; margin-bottom: 10px;
-  display: block;
-}
-
-.hobby-name { font-size: 13px; font-weight: 500; color: var(--text); margin-bottom: 4px; }
-.hobby-note { font-size: 11px; color: var(--text-muted); line-height: 1.5; }
-
-/* ── LANGUAGES ── */
-.lang-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-
-.lang-card {
-  background: var(--card); border: 1px solid var(--border);
-  border-radius: 10px; padding: 1.1rem 1.3rem;
-  display: flex; align-items: center; gap: 12px;
-  transition: background 0.3s, border-color 0.3s;
-}
-
-.lang-flag { font-size: 22px; }
-
-.lang-name { font-size: 13px; font-weight: 500; color: var(--text); }
-.lang-level { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
-
-.lang-dots { display: flex; gap: 4px; margin-top: 8px; }
-.ldot { width: 8px; height: 8px; border-radius: 50%; }
-.ldot.on { background: var(--crimson-light); }
-.ldot.off { background: var(--border); }
 
 /* ── EXTRACURRICULAR ── */
 .extra-card {
@@ -643,7 +601,7 @@ main {
 .contact-item span {
   font-size: 14px;
   font-weight: 500;
-  word-break: break-all; /* දිග ඊමේල් කැඩිලා පේන්න */
+  word-break: break-all;
 }
 
 /* ── RESPONSIVE ── */
@@ -656,4 +614,229 @@ main {
   .hobbies-grid { grid-template-columns: 1fr 1fr; }
 }
 
+main {
+  animation: transitionIn 0.6s ease-in-out;
+}
 
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px); /* යට ඉඳන් සෙමෙන් උඩට එන්න */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sidebar nav a {
+  transition: all 0.3s ease; /* ස්මූත් වෙන්න */
+}
+
+.sidebar nav a:hover {
+  color: var(--crimson-light);
+  padding-left: 15px; /* හොවර් කරද්දී ලින්ක් එක පොඩ්ඩක් දකුණට මාරු වේ */
+  background: rgba(220, 20, 60, 0.05); /* ලස්සන ලා රතු පසුබිමක් */
+  border-radius: 6px;
+}
+
+.education-item, .project-card, .skills-card, .extra-card {
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s ease;
+}
+
+.education-item:hover, .project-card:hover, .skills-card:hover, .extra-card:hover {
+  transform: translateY(-5px); /* කාඩ් එක පොඩ්ඩක් උඩට පාවෙනවා */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* යටින් ලස්සන ෂැඩෝ එකක් වැටෙනවා */
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111; /* ඩාර්ක් පසුබිම */
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--crimson, #dc143c);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--crimson-light);
+}
+
+/* Profile Image Premium Effect */
+.sidebar-profile-img {
+  border: 3px solid transparent;
+  background: linear-gradient(#111, #111) padding-box,
+              linear-gradient(135deg, var(--crimson, #dc143c), #ff6b81) border-box;
+  box-shadow: 0 0 20px rgba(220, 20, 60, 0.25);
+  transition: all 0.4s ease-in-out;
+}
+
+.sidebar-profile-img:hover {
+  transform: scale(1.05) rotate(2deg);
+  box-shadow: 0 0 30px rgba(220, 20, 60, 0.5);
+}
+
+/* Typography Upgrade */
+.section-title em {
+  background: linear-gradient(135deg, #ff4d6d, var(--crimson-light, #ff6b81));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-style: normal;
+  font-weight: 700;
+}
+
+/* Cards Modernization */
+.education-content, .project-card, .skills-card, .extra-card {
+  background: rgba(255, 255, 255, 0.03) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+/* Hover කරද්දී border එක crimson වෙන්න */
+.education-item:hover .education-content, 
+.project-card:hover, 
+.skills-card:hover, 
+.extra-card:hover {
+  border-color: rgba(220, 20, 60, 0.4) !important;
+}
+
+/* Selection Color */
+::selection {
+  background: var(--crimson, #dc143c);
+  color: #fff;
+}
+
+/* Typing effect for sub-title */
+.section-sub {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid var(--crimson-light); /* Cursor එක */
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--crimson-light); }
+}
+
+.cv-download-btn {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 0.4s ease;
+}
+
+.cv-download-btn::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 0; height: 100%;
+  background: linear-gradient(135deg, #ff4d6d, var(--crimson));
+  transition: width 0.4s ease;
+  z-index: -1;
+}
+
+.cv-download-btn:hover::before {
+  width: 100%;
+}
+
+.skill-progress-bar { margin: 15px 0; }
+.skill-name { display: flex; justify-content: space-between; font-size: 13px; color: var(--text); }
+.progress-line { 
+  height: 6px; background: rgba(255,255,255,0.1); 
+  border-radius: 10px; margin-top: 5px; position: relative;
+}
+.progress-line::after {
+  content: ''; position: absolute; left: 0; top: 0; height: 100%;
+  width: var(--width); background: var(--crimson); border-radius: 10px;
+}
+
+/* ── TECHNICAL SKILLS GRID ── */
+.tech-skills-container {
+  margin-top: 4rem;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.tech-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: pointer;
+}
+
+.tech-card img {
+  width: 45px;
+  height: 45px;
+  transition: transform 0.3s ease;
+}
+
+/* Light mode එකේදී GitHub icon එක පේන්න */
+[data-theme="light"] .tech-card .github-icon {
+  filter: invert(1);
+}
+
+.tech-card span {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  letter-spacing: 0.5px;
+}
+
+/* Hover Effect - Screenshot (64).png එකේ වගේ Border Glow එකක් */
+.tech-card:hover {
+  transform: translateY(-5px);
+  background: rgba(220, 20, 60, 0.03);
+  border-color: rgba(220, 20, 60, 0.5); /* Crimson glow */
+  box-shadow: 0 10px 25px rgba(220, 20, 60, 0.15);
+}
+
+.tech-card:hover img {
+  transform: scale(1.1);
+}
+
+/* ── SITE FOOTER STYLES ── */
+.site-footer {
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 4rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.site-footer p {
+  font-size: 13px;
+  color: var(--text-muted, #888);
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+
+[data-theme="light"] .site-footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}

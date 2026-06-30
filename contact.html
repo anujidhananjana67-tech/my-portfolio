@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | Anuji Dhananjana</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Sidebar Component (හැම පිටුවකම එකම විදිහට තියෙනවා) -->
+  <aside class="sidebar">
+    <div class="profile-container">
+      <button class="theme-btn" id="themeToggleBtn">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+      <img src="my photo.jpg.jpeg" alt="Anuji Dhananjana" class="sidebar-profile-img" onerror="this.style.display='none';">
+    </div>
+
+    <p class="sidebar-name">Anuji Dhananjana</p>
+    
+    <a href="CV.pdf" download="Anuji_Dhananjana_CV.pdf" class="cv-download-btn">
+      <i class="fa-solid fa-download"></i> Download CV
+    </a>
+
+    <div class="nav-divider"></div>
+    <p class="nav-label">Navigation</p>
+    
+    <nav>
+      <!-- මෙතනදී Contact කියන ලින්ක් එකට 'active' class එක දීලා තියෙනවා -->
+      <a href="index.html"><i class="fa-regular fa-user"></i> About me</a>
+      <a href="education.html"><i class="fa-solid fa-graduation-cap"></i> Education</a>
+      <a href="skills.html"><i class="fa-solid fa-layer-group"></i> Skills</a>
+      <a href="projects.html"><i class="fa-solid fa-code"></i> Projects</a>
+      <a href="extracurricular.html"><i class="fa-solid fa-users"></i> Extracurricular</a>
+      <a href="contact.html" class="active"><i class="fa-solid fa-paper-plane"></i> Contact</a>
+    </nav>
+    
+    <div class="sidebar-social">
+      <a href="mailto:anujidhananjana67@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/anuji-dhananjana" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="https://github.com/anujidhananjana67-tech" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.instagram.com/__snixzee.__" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+  </aside>
+
+  <!-- Main Content Area -->
+  <main>
+    <section id="contact" class="section active"> <!-- Active class එක එකතු කර ඇත -->
+      <p class="section-eyebrow">Get in Touch</p>
+      <h1 class="section-title">Contact <em>Me</em></h1>
+      <p class="section-sub">Open to internships, collaborations, and connections</p>
+      <div class="divider"></div>
+      
+      <div class="contact-grid">
+        <a class="contact-card" href="mailto:anujidhananjana67@gmail.com">
+          <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+          <div>
+            <p class="contact-label">Email</p>
+            <p class="contact-value">anujidhananjana67@gmail.com</p>
+          </div>
+        </a>
+        
+        <a class="contact-card" href="https://www.linkedin.com/in/anuji-dhananjana" target="_blank">
+          <div class="contact-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+          <div>
+            <p class="contact-label">LinkedIn</p>
+            <p class="contact-value">Anuji Dhananjana</p>
+          </div>
+        </a>
+        
+        <a class="contact-card" href="https://github.com/anujidhananjana67-tech" target="_blank">
+          <div class="contact-icon"><i class="fa-brands fa-github"></i></div>
+          <div>
+            <p class="contact-label">GitHub</p>
+            <p class="contact-value">anujidhananjana67-tech</p>
+          </div>
+        </a>
+        
+        <a class="contact-card" href="https://www.instagram.com/__snixzee.__" target="_blank">
+          <div class="contact-icon"><i class="fa-brands fa-instagram"></i></div>
+          <div>
+            <p class="contact-label">Instagram</p>
+            <p class="contact-value">@__snixzee.__</p>
+          </div>
+        </a>
+      </div>
+      
+      <div class="contact-msg">
+        <p>Feel free to reach out for <strong>internship opportunities</strong>, <strong>academic collaborations</strong>, or just to connect. I'm always open to learning from new people and experiences.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
