@@ -840,3 +840,51 @@ main {
 [data-theme="light"] .site-footer {
   border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
+
+.contact-form-container input:focus, 
+.contact-form-container textarea:focus {
+    outline: none;
+    border-color: var(--crimson, #dc143c) !important;
+    box-shadow: 0 0 5px rgba(220, 20, 60, 0.3);
+}
+
+.contact-form-container button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+    transition: all 0.2s ease;
+}
+
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #222;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    border-color: var(--crimson, #dc143c);
+}
+
+.repo-btn:hover {
+    background: var(--crimson, #dc143c) !important;
+    border-color: var(--crimson, #dc143c) !important;
+}
+/* Page Transition Effects */
+body {
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+body.loaded {
+    opacity: 1;
+}
+
+/* Main Content එක ඇතුළට එද්දී පොඩි slide-up effect එකක් දීම */
+main {
+    transform: translateY(10px);
+    transition: transform 0.4s ease-in-out;
+}
+
+body.loaded main {
+    transform: translateY(0);
+}

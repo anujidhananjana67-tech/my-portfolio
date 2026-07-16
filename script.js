@@ -1,41 +1,69 @@
-/* ── THEME SWITCHER LOGIC ── */
-const themeToggleBtn = document.getElementById('themeToggleBtn');
-const themeIcon = themeToggleBtn.querySelector('i');
+document.addEventListener("DOMContentLoaded", () => {
+    // 1. පිටුව ලස්සනට fade-in කරවීම
+    document.body.classList.add('loaded');
 
-// Check saved theme or system preference default to dark
-const savedTheme = localStorage.getItem('theme') || 'dark';
-document.documentElement.setAttribute('data-theme', savedTheme);
-updateThemeButton(savedTheme);
-
-if (themeToggleBtn) {
-  themeToggleBtn.addEventListener('click', () => {
-    const currentTheme = document.documentElement.getAttribute('data-theme');
-    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-    
-    document.documentElement.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-    updateThemeButton(newTheme);
-  });
-}
-
-function updateThemeButton(theme) {
-  if (themeIcon) {
-    if (theme === 'light') {
-      themeIcon.className = 'fa-solid fa-sun';
-    } else {
-      themeIcon.className = 'fa-solid fa-moon';
+    const sidebar = document.querySelector('.sidebar');
+    if (sidebar) {
+        // sidebar.html load කරගැනීම...
+        fetch('./sidebar.html')
+            .then(response => {
+                if (!response.ok) throw new Error("Sidebar file missing!");
+                return response.text();
+            })
+            .then(data => {
+                sidebar.innerHTML = data;
+                setActiveNavLink();
+                
+                const themeBtn = document.getElementById('themeToggleBtn');
+                if (themeBtn) {
+                    themeBtn.addEventListener('click', () => {
+                        document.body.classList.toggle('dark-theme');
+                    });
+                }
+            })
+            .catch(error => console.error('Error loading sidebar:', error));
     }
-  }
+});
+
+function setActiveNavLink() {
+    const currentPage = window.location.pathname.split("/").pop() || "index.html";
+    const navLinks = document.querySelectorAll('#sidebar-nav a');
+    
+    navLinks.forEach(link => {
+        const pageAttr = link.getAttribute('data-page');
+        if (currentPage === pageAttr) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+}
+// Contact Form එක වැඩ කරවීම (තිබේ නම් පමණක් ක්‍රියාත්මක වේ)
+const contactForm = document.getElementById('contact-form');
+const formStatus = document.getElementById('form-status');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', function(event) {
+        event.preventDefault(); // Page එක reload වීම වැළැක්වීම
+
+        formStatus.textContent = "Sending message...";
+        formStatus.style.color = "#aaa";
+
+        // YOUR_SERVICE_ID සහ YOUR_TEMPLATE_ID වෙනුවට ඔයාගේ ඒවා ආදේශ කරන්න
+        emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+            .then(() => {
+                formStatus.textContent = "✅ Message sent successfully! I'll get back to you soon.";
+                formStatus.style.color = "#2ecc71";
+                contactForm.reset(); // Form එක clear කිරීම
+            }, (error) => {
+                formStatus.textContent = "❌ Failed to send message. Please try again.";
+                formStatus.style.color = "#e74c3c";
+                console.error('EmailJS Error:', error);
+            });
+    });
 }
 
-const currentPath = window.location.pathname.split("/").pop();
-const navLinks = document.querySelectorAll('nav a');
-
-navLinks.forEach(link => {
-  const linkPath = link.getAttribute('href');
-  if (currentPath === linkPath || (currentPath === "" && linkPath === "index.html")) {
-    link.classList.add('active');
-  } else {
-    link.classList.remove('active');
-  }
+// වෙනත් පිටුවකට යද්දී ලස්සනට fade-out කරවීම
+window.addEventListener('beforeunload', () => {
+    document.body.classList.remove('loaded');
 });

@@ -10,41 +10,9 @@
 </head>
 <body>
 
-  <!-- Sidebar Component (හැම පිටුවකම එකම විදිහට තියෙනවා) -->
-  <aside class="sidebar">
-    <div class="profile-container">
-      <button class="theme-btn" id="themeToggleBtn">
-        <i class="fa-solid fa-moon"></i>
-      </button>
-      <img src="my photo.jpg.jpeg" alt="Anuji Dhananjana" class="sidebar-profile-img" onerror="this.style.display='none';">
-    </div>
-
-    <p class="sidebar-name">Anuji Dhananjana</p>
+  
+  <aside class="sidebar"></aside>
     
-    <a href="CV.pdf" download="Anuji_Dhananjana_CV.pdf" class="cv-download-btn">
-      <i class="fa-solid fa-download"></i> Download CV
-    </a>
-
-    <div class="nav-divider"></div>
-    <p class="nav-label">Navigation</p>
-    
-    <nav>
-      <!-- මෙතනදී Contact කියන ලින්ක් එකට 'active' class එක දීලා තියෙනවා -->
-      <a href="index.html"><i class="fa-regular fa-user"></i> About me</a>
-      <a href="education.html"><i class="fa-solid fa-graduation-cap"></i> Education</a>
-      <a href="skills.html"><i class="fa-solid fa-layer-group"></i> Skills</a>
-      <a href="projects.html"><i class="fa-solid fa-code"></i> Projects</a>
-      <a href="extracurricular.html"><i class="fa-solid fa-users"></i> Extracurricular</a>
-      <a href="contact.html" class="active"><i class="fa-solid fa-paper-plane"></i> Contact</a>
-    </nav>
-    
-    <div class="sidebar-social">
-      <a href="mailto:anujidhananjana67@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
-      <a href="https://www.linkedin.com/in/anuji-dhananjana" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-      <a href="https://github.com/anujidhananjana67-tech" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
-      <a href="https://www.instagram.com/__snixzee.__" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-    </div>
-  </aside>
 
   <!-- Main Content Area -->
   <main>
@@ -91,6 +59,37 @@
       <div class="contact-msg">
         <p>Feel free to reach out for <strong>internship opportunities</strong>, <strong>academic collaborations</strong>, or just to connect. I'm always open to learning from new people and experiences.</p>
       </div>
+      <!-- Contact Form Section -->
+<div class="contact-form-container" style="margin-top: 40px;">
+  <h3 style="margin-bottom: 20px; font-family: 'Playfair Display', serif;">Send me a Message</h3>
+  <form id="contact-form">
+    <div style="margin-bottom: 15px;">
+      <input type="text" name="user_name" id="userName" placeholder="Your Name" required 
+             style="width: 100%; padding: 12px; border: 1px solid #333; background: #111; color: #fff; border-radius: 6px;">
+    </div>
+    <div style="margin-bottom: 15px;">
+      <input type="email" name="user_email" id="userEmail" placeholder="Your Email" required 
+             style="width: 100%; padding: 12px; border: 1px solid #333; background: #111; color: #fff; border-radius: 6px;">
+    </div>
+    <div style="margin-bottom: 15px;">
+      <textarea name="message" id="userMessage" placeholder="Your Message" rows="5" required 
+                style="width: 100%; padding: 12px; border: 1px solid #333; background: #111; color: #fff; border-radius: 6px; resize: vertical;"></textarea>
+    </div>
+    <button type="submit" style="background: var(--crimson, #dc143c); color: white; padding: 12px 24px; border: none; border-radius: 6px; cursor: pointer; font-weight: 500;">
+      <i class="fa-solid fa-paper-plane"></i> Send Message
+    </button>
+  </form>
+  <div id="form-status" style="margin-top: 15px; font-weight: 500;"></div>
+</div>
+
+<!-- EmailJS SDK එක එකතු කිරීම -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="text/javascript">
+   (function(){
+      // YOUR_PUBLIC_KEY වෙනුවට ඔයාගේ EmailJS Public Key එක දාන්න
+      emailjs.init("YOUR_PUBLIC_KEY"); 
+   })();
+</script>
     </section>
   </main>
 

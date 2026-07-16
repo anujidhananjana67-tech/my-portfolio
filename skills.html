@@ -10,41 +10,8 @@
 </head>
 <body>
 
-  <!-- Sidebar Component -->
-  <aside class="sidebar">
-    <div class="profile-container">
-      <button class="theme-btn" id="themeToggleBtn">
-        <i class="fa-solid fa-moon"></i>
-      </button>
-      <img src="my photo.jpg.jpeg" alt="Anuji Dhananjana" class="sidebar-profile-img" onerror="this.style.display='none';">
-    </div>
-
-    <p class="sidebar-name">Anuji Dhananjana</p>
-    
-    <a href="CV.pdf" download="Anuji_Dhananjana_CV.pdf" class="cv-download-btn">
-      <i class="fa-solid fa-download"></i> Download CV
-    </a>
-
-    <div class="nav-divider"></div>
-    <p class="nav-label">Navigation</p>
-    
-    <nav>
-      <!-- මෙතනදී Skills කියන ලින්ක් එක 'active' කර ඇත -->
-      <a href="index.html"><i class="fa-regular fa-user"></i> About me</a>
-      <a href="education.html"><i class="fa-solid fa-graduation-cap"></i> Education</a>
-      <a href="skills.html" class="active"><i class="fa-solid fa-layer-group"></i> Skills</a>
-      <a href="projects.html"><i class="fa-solid fa-code"></i> Projects</a>
-      <a href="extracurricular.html"><i class="fa-solid fa-users"></i> Extracurricular</a>
-      <a href="contact.html"><i class="fa-solid fa-paper-plane"></i> Contact</a>
-    </nav>
-    
-    <div class="sidebar-social">
-      <a href="mailto:anujidhananjana67@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
-      <a href="https://www.linkedin.com/in/anuji-dhananjana" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-      <a href="https://github.com/anujidhananjana67-tech" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
-      <a href="https://www.instagram.com/__snixzee.__" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-    </div>
-  </aside>
+  <!-- JavaScript එකෙන් dynamic ලෙස මෙතනට sidebar එක load වේ -->
+  <aside class="sidebar"></aside>
 
   <!-- Main Content Area -->
   <main>
@@ -67,13 +34,16 @@
           <p>Git, GitHub, VS Code</p>
         </div>
       </div>
+
+      <!-- Progress bar එක පිළිවෙලකට section එක ඇතුළටම ගත්තා -->
+      <div class="skill-progress-bar">
+        <div class="skill-name">Java <span class="percentage">80%</span></div>
+        <div class="progress-line" style="--width: 80%;"></div>
+      </div>
     </section>
   </main>
   
-<div class="skill-progress-bar">
-  <div class="skill-name">Java <span class="percentage">80%</span></div>
-  <div class="progress-line" style="--width: 80%;"></div>
-</div>
-
+  <!-- Script එක body එක ඇතුළේ අන්තිමටම තිබිය යුතුයි -->
+  <script src="script.js"></script>
 </body>
 </html>
